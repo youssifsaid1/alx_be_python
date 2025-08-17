@@ -1,19 +1,25 @@
-# Global conversion factors
-FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
+#!/usr/bin/python3
+"""
+Module: arithmetic_operations
+This module provides basic arithmetic functions.
+"""
 
-def convert_to_celsius(fahrenheit):
-    """Convert Fahrenheit to Celsius"""
-    return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
-def convert_to_fahrenheit(celsius):
-    """Convert Celsius to Fahrenheit"""
-    return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
+def add(a, b):
+    """Return the sum of a and b."""
+    return a + b
 
-def main():
-    try:
-        temperature = float(input("Enter the temperature to convert: "))
-        unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
 
-        if unit == "F":
-            result = convert_to_celsius(temperature)
+def subtract(a, b):
+    """Return the difference of a and b."""
+    return a - b
+
+
+def multiply(a, b):
+    """Return the product of a and b."""
+    return a * b
+
+
+def divide(a, b):
+    """Return the division of a by b. Raises ZeroDivisionError if b == 0."""
+    return a / b
